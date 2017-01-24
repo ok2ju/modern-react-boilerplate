@@ -1,0 +1,29 @@
+# Folder view configuration files
+.DS_Store
+.DS_Store?
+Desktop.ini
+
+# Thumbnail cache files
+._*
+ehthumbs.db
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# log files #
+*.log
+.npm-debug.log
+logs
+
+# vim tmp files
+*.swp
+*.un~
+
+.idea
+.vscode
+node_modules
+bower_components
+typings
+tsd_typings
