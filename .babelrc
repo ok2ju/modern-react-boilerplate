@@ -15,6 +15,11 @@
       "presets": [
         "react-hmre"
       ]
+    },
+    "production": {
+      "presets": [
+        "babili"
+      ]
     }
   }
 }

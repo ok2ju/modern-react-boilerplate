@@ -23,23 +23,6 @@ module.exports = function(env) {
       new webpack.LoaderOptionsPlugin({
         minimize: true,
         debug: false,
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-          screw_ie8: true,
-          conditionals: true,
-          unused: true,
-          comparisons: true,
-          sequences: true,
-          dead_code: true,
-          evaluate: true,
-          if_return: true,
-          join_vars: true,
-        },
-        output: {
-          comments: false,
-        },
       })
     );
   } else {
@@ -63,25 +46,22 @@ module.exports = function(env) {
       path: buildPath,
     },
     module: {
-      rules: [
-        {
-          test: /\.html$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'file-loader',
-            query: {
-              name: '[name].[ext]'
-            },
+      rules: [{
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'file-loader',
+          query: {
+            name: '[name].[ext]'
           },
         },
-        {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: [
-            'babel-loader'
-          ],
-        },
-      ],
+      }, {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader'
+        ],
+      }],
     },
     resolve: {
       extensions: ['.js', 'jsx'],
