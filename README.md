@@ -1,3 +1,3 @@
 # modern-react-boilerplate
 
-![](http://imgur.com/a/hupwc)
+![](http://media.giphy.com/media/EldfH1VJdbrwY/giphy.gif)
