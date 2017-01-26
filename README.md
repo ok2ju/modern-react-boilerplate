@@ -6,3 +6,4 @@
 - Webpack 2.2.0
 - babel-preset-env
 - babili
+- ESLint
