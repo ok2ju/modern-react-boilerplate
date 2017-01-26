@@ -1,13 +1,22 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
   "parser": "babel-eslint",
   "env": {
     "mocha": true,
     "browser": true
   },
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
   ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
   "rules": {
     "react/forbid-prop-types": [0],
     "jsx-a11y/no-static-element-interactions": 0,

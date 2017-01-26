@@ -1,17 +1,29 @@
 {
   "name": "modern-boilerplate",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Modern React+Redux starter project",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
     "build": "cross-env NODE_ENV=productuin webpack --env.prod=true",
-    "lint": "eslint ./src -f table || true"
+    "lint": "eslint ./src -f table || true",
+    "typecheck": "flow"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "redux",
+    "es2015",
+    "babel6",
+    "webpack2",
+    "flow",
+    "babili",
+    "preset-env",
+    "boilerplace",
+    "starter"
+  ],
+  "author": "Alexey Vakulich <soulSpringg@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
@@ -20,6 +32,7 @@
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-babili": "^0.0.10",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
@@ -27,10 +40,12 @@
     "cross-env": "^3.1.4",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "file-loader": "^0.9.0",
+    "flow-bin": "^0.38.0",
     "webpack": "2.2.0",
     "webpack-dev-server": "2.2.0"
   }

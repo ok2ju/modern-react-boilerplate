@@ -7,3 +7,4 @@
 - babel-preset-env
 - babili
 - ESLint
+- Flow
