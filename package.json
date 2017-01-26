@@ -4,8 +4,11 @@
   "description": "Modern React+Redux starter project",
   "main": "index.js",
   "scripts": {
+    "clean:build": "rimraf dist",
+    "prestart": "yarn run clean:build",
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
+    "prebuild": "yarn run clean:build",
     "build": "cross-env NODE_ENV=productuin webpack --env.prod=true",
     "lint": "eslint ./src -f table || true",
     "typecheck": "flow"
@@ -46,6 +49,7 @@
     "eslint-plugin-react": "^6.9.0",
     "file-loader": "^0.9.0",
     "flow-bin": "^0.38.0",
+    "rimraf": "^2.5.4",
     "webpack": "2.2.0",
     "webpack-dev-server": "2.2.0"
   }
