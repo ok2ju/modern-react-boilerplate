@@ -64,7 +64,7 @@ module.exports = function(env) {
       }],
     },
     resolve: {
-      extensions: ['*', '.js', 'jsx'],
+      extensions: ['*', '.js', '.jsx'],
       modules: [
         resolve(__dirname, 'node_modules'),
         sourcePath,
