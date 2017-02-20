@@ -1,10 +1,11 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const sourcePath = resolve(__dirname, 'src');
 const buildPath = resolve(__dirname, 'dist');
 
-module.exports = function(env) {
+module.exports = (env) => {
   const nodeEnv = env && env.prod ? 'production' : 'development';
   const isProd = nodeEnv === 'production';
 
@@ -12,8 +13,13 @@ module.exports = function(env) {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.ejs',
+      title: 'Modern Boilerplate',
+    }),
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
+      'process.env': { NODE_ENV: JSON.stringify(nodeEnv) },
     }),
     new webpack.NamedModulesPlugin(),
   ];
@@ -38,7 +44,7 @@ module.exports = function(env) {
       main: './index.js',
       vendor: [
         'react',
-        'react-dom'
+        'react-dom',
       ],
     },
     output: {
@@ -47,24 +53,15 @@ module.exports = function(env) {
     },
     module: {
       rules: [{
-        test: /\.html$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'file-loader',
-          query: {
-            name: '[name].[ext]'
-          },
-        },
-      }, {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader'
+          'babel-loader',
         ],
       }],
     },
     resolve: {
-      extensions: ['*', '.js', '.jsx'],
+      extensions: ['.js', '.jsx'],
       modules: [
         resolve(__dirname, 'node_modules'),
         sourcePath,

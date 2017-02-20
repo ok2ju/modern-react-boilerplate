@@ -2,11 +2,8 @@
 
 import React from 'react';
 
-const App = () => (
-  <div>
-    <h2>Hello, </h2>
-    <span>Test</span>
-  </div>
+const App = ({ name = 'world' }: { name: string }) => (
+  <h2 className="foo">Hello, {name}</h2>
 );
 
 export default App;

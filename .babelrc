@@ -23,6 +23,10 @@
       "presets": [
         "babili"
       ]
+    },
+    "test": {
+      // bacause of earlier we disable transformation of es2015 modules (needed for jest)
+      "presets": ["env"]
     }
   }
 }
