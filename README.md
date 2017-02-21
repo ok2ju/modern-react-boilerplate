@@ -8,3 +8,4 @@
 - babili
 - ESLint
 - Flow
+- Jest + enzyme
