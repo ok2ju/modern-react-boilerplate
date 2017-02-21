@@ -8,3 +8,5 @@
 - babili
 - ESLint
 - Flow
+- Jest + enzyme
+- React-router
