@@ -12,6 +12,7 @@ module.exports = (env) => {
   const plugins = [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
+      minChunks: module => /node_modules/.test(module.resource),
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -40,13 +41,22 @@ module.exports = (env) => {
   return {
     context: sourcePath,
     devtool: isProd ? 'source-map' : 'eval',
-    entry: {
-      main: './index.js',
-      vendor: [
-        'react',
-        'react-dom',
-      ],
-    },
+    entry: [
+      'react-hot-loader/patch',
+      // activate HMR for React
+
+      'webpack-dev-server/client?http://localhost:8080',
+      // bundle the client for webpack-dev-server
+      // and connect to the provided endpoint
+
+      'webpack/hot/only-dev-server',
+      // bundle the client for hot reloading
+      // only- means to only hot reload for successful updates
+
+
+      './index.jsx'
+      // the entry point of our app
+    ],
     output: {
       filename: '[name].js',
       path: buildPath,
@@ -71,10 +81,7 @@ module.exports = (env) => {
     devServer: {
       contentBase: sourcePath,
       historyApiFallback: true,
-      port: 3000,
       hot: !isProd,
-      compress: isProd,
-      inline: !isProd,
     },
   };
 };
