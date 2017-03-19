@@ -18,6 +18,7 @@
     },
     "production": {
       "presets": [
+        // TODO: check babili-webpack-plugin
         "babili"
       ]
     },
