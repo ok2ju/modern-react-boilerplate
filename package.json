@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean:build": "rimraf dist",
-    "prestart": "yarn run clean:build",
-    "start": "webpack-dev-server",
-    "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js",
     "prebuild": "yarn run clean:build",
-    "build": "cross-env NODE_ENV=productuin webpack --env.prod=true",
+    "build": "cross-env NODE_ENV=productuin webpack --config ./config/webpack.config.prod.js",
     "lint": "eslint ./src -f table || true",
     "typecheck": "flow",
     "test": "jest"
@@ -47,6 +45,7 @@
     "enzyme": "^2.7.1",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "^14.0.0",
+    "eslint-loader": "^1.6.3",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
@@ -60,6 +59,7 @@
     "react-test-renderer": "^15.4.2",
     "rimraf": "^2.5.4",
     "webpack": "2.2.0",
-    "webpack-dev-server": "2.2.0"
+    "webpack-dev-server": "2.2.0",
+    "webpack-merge": "^4.1.0"
   }
 }

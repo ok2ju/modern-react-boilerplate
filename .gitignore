@@ -24,8 +24,4 @@ logs
 .idea
 .vscode
 node_modules
-bower_components
-typings
-tsd_typings
-
 dist

@@ -1,5 +1,5 @@
-// flow-typed signature: e49570b0f5e396c7206dda452bd6f004
-// flow-typed version: 1590d813f4/jest_v18.x.x/flow_>=v0.33.x
+// flow-typed signature: 032214c577f085159829eeae40c41e6a
+// flow-typed version: 7dc2a8971e/jest_v18.x.x/flow_>=v0.33.x
 
 type JestMockFn = {
   (...args: Array<any>): any,
@@ -413,7 +413,7 @@ declare var expect: {
   anything(): void,
   arrayContaining(value: Array<mixed>): void,
   objectContaining(value: Object): void,
-  stringMatching(value: string): void,
+  stringMatching(value: string | RegExp): void,
 };
 
 // TODO handle return type
