@@ -2,14 +2,17 @@ const { join } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const sourcePath = join(__dirname, '..', 'src');
-const buildPath = join(__dirname, '..', 'dist');
+const dir = {
+  source: join(__dirname, '..', 'src'),
+  build: join(__dirname, '..', 'dist'),
+  modules: join(__dirname, '..', 'node_modules'),
+};
 
 const common = {
-  context: sourcePath,
+  context: dir.source,
   output: {
     filename: '[name].js',
-    path: buildPath,
+    path: dir.build,
   },
   module: {
     rules: [{
@@ -26,8 +29,8 @@ const common = {
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [
-      join(__dirname, '..', 'node_modules'),
-      sourcePath,
+      dir.modules,
+      dir.source,
     ],
   },
   plugins: [
@@ -44,8 +47,4 @@ const common = {
   ],
 };
 
-module.exports = {
-  common,
-  sourcePath,
-  buildPath,
-};
+module.exports = { dir, common };

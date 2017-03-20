@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const { common, sourcePath } = require('./base');
+const { dir, common } = require('./base');
 
 module.exports = function(env) {
   return merge(common, {
@@ -14,14 +14,14 @@ module.exports = function(env) {
     ],
     plugins: [
       new webpack.DefinePlugin({
-          'process.env': {
-              'NODE_ENV': JSON.stringify('development')
-          }
+        'process.env': {
+          'NODE_ENV': JSON.stringify('development')
+        }
       }),
       new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
-      contentBase: sourcePath,
+      contentBase: dir.source,
       historyApiFallback: true,
       hot: true,
     },
