@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const sourcePath = join(__dirname, '..', 'src');
 const buildPath = join(__dirname, '..', 'dist');
 
-const base = {
+const common = {
   context: sourcePath,
   output: {
     filename: '[name].js',
@@ -40,15 +40,12 @@ const base = {
       template: 'index.ejs',
       title: 'Modern Boilerplate',
     }),
-    new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) },
-    }),
     new webpack.NamedModulesPlugin(),
   ],
 };
 
 module.exports = {
-  base,
+  common,
   sourcePath,
   buildPath,
 };

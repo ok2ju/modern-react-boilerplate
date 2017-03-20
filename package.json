@@ -4,10 +4,10 @@
   "description": "Modern React+Redux starter project",
   "main": "index.js",
   "scripts": {
-    "clean:build": "rimraf dist",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js",
-    "prebuild": "yarn run clean:build",
-    "build": "cross-env NODE_ENV=productuin webpack --config ./config/webpack.config.prod.js",
+    "clean": "rimraf dist",
+    "start": "webpack-dev-server --env=dev",
+    "prebuild": "yarn run clean",
+    "build": "webpack --env=prod",
     "lint": "eslint ./src -f table || true",
     "typecheck": "flow",
     "test": "jest"
