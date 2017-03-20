@@ -1,6 +1,8 @@
 [ignore]
 <PROJECT_ROOT>/dist/.*
 .*/node_modules/.*
+.*/__tests__/.*
+.*\.spec\.js
 
 [include]
 
