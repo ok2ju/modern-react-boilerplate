@@ -1,30 +1,43 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "chrome": 53,
-        "browsers": ["last 2 versions", "safari 7"]
-      },
-      "modules": false,
-      "loose": true
-    }],
-    "react"
-  ],
   "env": {
     "development": {
+      "presets": [
+        ["env", {
+          "modules": false,
+          "loose": true,
+          "targets": {
+            "browsers": ["last 2 versions", "safari 7"]
+          }
+        }],
+        "react"
+      ],
       "plugins": [
-        "react-hot-loader/babel"
+        "transform-class-properties",
+        "transform-object-rest-spread"
       ]
     },
     "production": {
       "presets": [
-        // TODO: check babili-webpack-plugin
-        "babili"
+        "babili",
+        ["env", {
+          "loose": true,
+          "targets": {
+            "browsers": ["last 2 versions", "safari 7"]
+          }
+        }],
+        "react"
+      ],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
       ]
     },
     "test": {
-      // bacause of earlier we disable transformation of es2015 modules (needed for jest)
-      "presets": ["env"]
+      "presets": ["env", "react"],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
+      ]
     }
   }
 }

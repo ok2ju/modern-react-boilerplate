@@ -10,14 +10,5 @@ export default (initialState) => {
   );
   /* eslint-enable */
 
-  if (module.hot) {
-    module.hot.accept('../reducers', () => {
-      /* eslint-disable global-require */
-      const nextRootReducer = require('../reducers').default;
-      /* eslint-enable global-require */
-      store.replaceReducer(nextRootReducer);
-    });
-  }
-
   return store;
 };

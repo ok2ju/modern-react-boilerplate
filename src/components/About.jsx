@@ -1,9 +1,20 @@
-/* @flow */
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-import React from 'react';
+class About extends PureComponent {
+  static propTypes = {
+    name: PropTypes.string,
+  };
 
-const About = ({ name = 'world' }: { name: string }) => (
-  <h2 className="about">About {name} page</h2>
-);
+  static defaultProps = {
+    name: 'world',
+  };
+
+  render() {
+    return (
+      <h2 className="about">About {this.props.name} page</h2>
+    );
+  }
+}
 
 export default About;

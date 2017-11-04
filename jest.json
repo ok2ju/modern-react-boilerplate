@@ -1,0 +1,15 @@
+{
+  "collectCoverage": true,
+  "coverageReporters": [
+    "text"
+  ],
+  "rootDir": "./",
+  "setupFiles": ["./jest.setup.js"],
+  "modulePaths": [
+    "<rootDir>"
+  ],
+  "testRegex": "\\.spec\\.jsx?$",
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  }
+}

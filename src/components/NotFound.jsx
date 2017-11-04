@@ -1,9 +1,20 @@
-/* @flow */
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-import React from 'react';
+class NotFound extends PureComponent {
+  static propTypes = {
+    name: PropTypes.string,
+  };
 
-const NotFound = ({ name = 'Test' }: { name: string }) => (
-  <h2 className="about">Sorry, {name} page not found</h2>
-);
+  static defaultProps = {
+    name: 'Test',
+  };
+
+  render() {
+    return (
+      <h2 className="about">Sorry, {name} page not found</h2>
+    );
+  }
+}
 
 export default NotFound;

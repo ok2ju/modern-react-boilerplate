@@ -1,4 +1,4 @@
-import { ADD_TODO } from '../constants/ActionTypes';
+import { ADD_TODO } from '../constants/actionTypes';
 
 const initialState = [{
   id: 0,
@@ -12,7 +12,7 @@ export default function todos(state = initialState, action) {
       return [{
         id: (state.length === 0) ? 0 : state[0].id + 1,
         marked: false,
-        text: action.text,
+        text: action.payload,
       }, ...state];
     default:
       return state;

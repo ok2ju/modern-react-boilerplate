@@ -1,4 +1,4 @@
 **/*{.,-}min.js
 **/dist/*
-**/config/*
+**/webpack/*
 **/node_modules/*
