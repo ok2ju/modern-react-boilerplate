@@ -11,10 +11,15 @@
     "react"
   ],
   "rules": {
-    "react/forbid-prop-types": [0],
+    "function-paren-newline": ["error", "consistent"],
     "import/no-unresolved": 0,
-    "jsx-a11y/no-marquee": 0,
     "import/no-extraneous-dependencies": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/forbid-prop-types": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/no-marquee": 0,
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["to"]
+    }]
   }
 }

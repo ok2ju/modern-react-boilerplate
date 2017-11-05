@@ -12,7 +12,7 @@ class NotFound extends PureComponent {
 
   render() {
     return (
-      <h2 className="about">Sorry, {name} page not found</h2>
+      <h2 className="about">Sorry, {this.props.name} page not found</h2>
     );
   }
 }
