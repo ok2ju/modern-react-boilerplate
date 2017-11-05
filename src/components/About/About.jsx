@@ -1,20 +1,21 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import theme from './theme.css';
 
-class NotFound extends PureComponent {
+class About extends PureComponent {
   static propTypes = {
     name: PropTypes.string,
   };
 
   static defaultProps = {
-    name: 'Test',
+    name: 'world',
   };
 
   render() {
     return (
-      <h2 className="about">Sorry, {this.props.name} page not found</h2>
+      <h2 className={theme.about}>About {this.props.name} page</h2>
     );
   }
 }
 
-export default NotFound;
+export default About;

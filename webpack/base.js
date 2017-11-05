@@ -10,10 +10,6 @@ const dir = {
 
 const common = {
   context: dir.source,
-  output: {
-    filename: '[name].js',
-    path: dir.build,
-  },
   module: {
     rules: [{
       test: /\.jsx?$/,

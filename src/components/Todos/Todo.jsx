@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import theme from './theme.css';
 
 class Todo extends PureComponent {
   static propTypes = {
@@ -8,7 +9,7 @@ class Todo extends PureComponent {
 
   render() {
     return (
-      <li className="todoItem">{this.props.text}</li>
+      <li className={theme.todoItem}>{this.props.text}</li>
     );
   }
 }

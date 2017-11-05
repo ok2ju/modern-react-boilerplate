@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
+import theme from './theme.css';
 
 class Todos extends PureComponent {
   static propTypes = {
@@ -34,7 +35,7 @@ class Todos extends PureComponent {
     const { todos } = this.props;
 
     return (
-      <div className="todos">
+      <div className={theme.todos}>
         <input
           type="text"
           value={this.state.value}

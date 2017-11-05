@@ -42,6 +42,7 @@ $ yarn dev
 ## Varieties
 This repository has two branches:
 * `develop` - basic react application boilerplate with minimum configuration
+* `package/postcss` - basic boilerplate with styles (postcss, css modules)
 * `package/flowtyped-react` - react boilerplate with [flow](https://flow.org/) - static type checker
 
 **Note**: currently this branches have different dependencies versions. 😓 I will fix it later.
