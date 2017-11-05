@@ -16,6 +16,11 @@ module.exports = function(env) {
         minimize: true,
         debug: false,
       }),
+      new webpack.optimize.UglifyJsPlugin({
+        beautify: false,
+        comments: false,
+        sourceMap: true,
+      }),
     ],
   });
 }

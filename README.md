@@ -4,7 +4,7 @@
 
 ## Toolset
 * [webpack](https://webpack.js.org/) with [webpack-dev-server](https://github.com/webpack/webpack-dev-server), [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin)
-* [Babel](http://babeljs.io/) with [babel-preset-env](https://github.com/babel/babel-preset-env), [babel-preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react), [object spread](https://babeljs.io/docs/plugins/transform-object-rest-spread/), [class properties](https://babeljs.io/docs/plugins/transform-class-properties/), [babili](https://github.com/babel/minify)
+* [Babel](http://babeljs.io/) with [babel-preset-env](https://github.com/babel/babel-preset-env), [babel-preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react), [object spread](https://babeljs.io/docs/plugins/transform-object-rest-spread/), [class properties](https://babeljs.io/docs/plugins/transform-class-properties/)
 * [ESLint](http://eslint.org/)
 * [Jest](http://facebook.github.io/jest) + [Enzyme](http://airbnb.io/enzyme/)
 * [React-router v3](https://github.com/ReactTraining/react-router/tree/v3/docs)

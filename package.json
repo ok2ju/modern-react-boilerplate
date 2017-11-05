@@ -17,7 +17,6 @@
     "es2015",
     "babel6",
     "webpack3",
-    "babili",
     "preset-env",
     "boilerplace",
     "starter"
@@ -39,7 +38,6 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-babili": "^0.0.12",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.1.0",
